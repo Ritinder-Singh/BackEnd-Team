@@ -8,15 +8,15 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "./Table.css";
 
-function createData(name, trackingId, date, status) {
-  return { name, trackingId, date, status };
+function createData(name, trackingId, date, status, Link) {
+  return { name, trackingId, date, status, Link };
 }
 
 const rows = [
-  createData("Sec 34 CHD", 18908424, "2 March 2023", "Repaired"),
-  createData("Sec 9 PKL ", 18908424, "2 July 2023", "Pending"),
-  createData("Sec 44 CHD", 18908424, "2 April 2023", "Repaired"),
-  createData("Sec 15 CHD", 18908421, "2 June 2023", "Inspected"),
+  createData("Sec 34 CHD", 18908424, "2 March 2023", "Repaired", "https://youtu.be/QmAFtIjl0EY"),
+  createData("Sec 9 PKL ", 18908424, "2 July 2023", "Pending", "#"),
+  createData("Sec 44 CHD", 18908424, "2 April 2023", "Repaired", "#"),
+  createData("Sec 15 CHD", 18908421, "2 June 2023", "Inspected" ,"#"),
 ];
 
 
@@ -54,11 +54,11 @@ export default function BasicTable() {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Product</TableCell>
+                <TableCell>Location</TableCell>
                 <TableCell align="left">Tracking ID</TableCell>
                 <TableCell align="left">Date</TableCell>
                 <TableCell align="left">Status</TableCell>
-                <TableCell align="left"></TableCell>
+                <TableCell align="left">Video Link</TableCell>
               </TableRow>
             </TableHead>
             <TableBody style={{ color: "white" }}>
@@ -75,7 +75,7 @@ export default function BasicTable() {
                   <TableCell align="left">
                     <span className="status" style={makeStyle(row.status)}>{row.status}</span>
                   </TableCell>
-                  <TableCell align="left" className="Details">Video Links</TableCell>
+                  <TableCell align="left" className="Details"><a className="linkToVideo"href={row.Link} target="_blank">Click Here</a></TableCell>
                 </TableRow>
               ))}
             </TableBody>

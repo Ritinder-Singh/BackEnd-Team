@@ -72,6 +72,12 @@
 }
 
 
+.linkToVideo{
+  /* font-size: 15px; */
+  text-decoration: none;
+}
+
+
 /* Tablets */
 @media screen and (max-width: 1200px) {
   .menuItem>span{

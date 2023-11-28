@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Chart, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
@@ -14,7 +14,7 @@ const data = {
     datasets: [{
         data: [67, 10],
         backgroundColor: [
-            'rgb(208, 245, 190)',
+            'rgb(121, 224, 238',
             'rgb(152, 238, 204)'
         ],
         borderWidth: 2,
