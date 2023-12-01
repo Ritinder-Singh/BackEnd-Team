@@ -7,7 +7,7 @@ import { UilTimes } from "@iconscout/react-unicons";
 import Chart from "react-apexcharts";
 import Map from "../Map";
 
-import { GoogleApiWrapper } from 'google-map-react';
+// import { GoogleApiWrapper } from 'google-map-react';
 
 // parent Card
 
